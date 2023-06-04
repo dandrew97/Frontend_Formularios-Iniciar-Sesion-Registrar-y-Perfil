@@ -1,1 +1,31 @@
-<p>create works!</p>
+<form (ngSubmit)="createUser()" #createForm="ngForm" class="form">
+    <p class="title"> Registrarse </p>
+    <p class="message"> Registrate ahora y disfruta de nuestra app. </p>
+        <div class="flex">
+        <label>
+            <input [(ngModel)]="nombres" name="nombres" required="" placeholder="" type="text" class="input">
+            <span>Nombres</span>
+        </label>
+
+        <label>
+            <input [(ngModel)]="apellidos" name="apellidos" required="" placeholder="" type="text" class="input">
+            <span>Apellidos</span>
+        </label>
+    </div>  
+            
+    <label>
+        <input [(ngModel)]="email" name="email" required="" placeholder="" type="email" class="input">
+        <span>Email</span>
+    </label> 
+        
+    <label>
+        <input [(ngModel)]="password" name="password" required="" placeholder="" type="password" class="input">
+        <span>Contraseña</span>
+    </label>
+    <!-- <label>
+        <input [(ngModel)]="pas" required="" placeholder="" type="password" class="input">
+        <span>Confirmar Contrasela</span>
+    </label> -->
+    <button class="submit">Registrarse</button>
+    <p class="signin">No tienes una cuenta aún ? <a href="#">Signin</a> </p>
+</form>

@@ -18,7 +18,7 @@ export class LoginComponent {
     //   email: this.email,
     //   password: this.password,
     // }
-    // console.log("email:" , this.email)
-    // console.log("password:" , this.password);
+    console.log("email:" , this.email),
+    console.log("password:" , this.password);
   }
 }
