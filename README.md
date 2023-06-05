@@ -1,27 +1,19 @@
-# Login
+# Proyecto de Frontend con Angular
+Este repositorio contiene el código fuente del proyecto de frontend desarrollado con Angular. El proyecto tiene como objetivo proporcionar funcionalidades para el inicio de sesión de usuarios, registro y manejo de perfiles.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.3.
+## Características
+- Componentes para el inicio de sesión, registro y manejo de perfiles de usuario.
+- Formularios para iniciar sesión, registrarse y mostrar el perfil del usuario.
+- Implementación de JSON Web Tokens (JWT) para la autenticación y autorización de usuarios.
+- Rutas anidadas entre los componentes para una navegación fluida.
 
-## Development server
+## Requisitos previos
+- Node.js (v12 o superior)
+- Angular CLI (v12 o superior)
+- MongoDB (para almacenar y administrar los perfiles de usuario).
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Uso
+- Para acceder a la página de inicio de sesión, navega a /login.
+- Para acceder a la página de registro, navega a /register.
+- Para acceder a la página de perfil de usuario, navega a /profile.
+- La autenticación se realiza a través de JSON Web Tokens (JWT). Asegúrate de tener un backend configurado para generar y verificar los tokens de forma adecuada.
