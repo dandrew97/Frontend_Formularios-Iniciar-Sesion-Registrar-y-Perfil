@@ -36,11 +36,10 @@ export class UserservicesService {
     )
   }
 
-  create(nombres:string, apellidos:string, email:string, password: string): void {
+  create(username:string, email:string, password: string): void {
     const createUrl = `${this.apiUrl}/create`
     const formData = {
-      nombres: nombres,
-      apellidos: apellidos,
+      username: username,
       email: email,
       password: password
     }

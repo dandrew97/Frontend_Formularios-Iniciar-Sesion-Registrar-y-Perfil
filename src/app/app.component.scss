@@ -1,0 +1,26 @@
+.buttonUsers {
+    margin-left: 140px;
+    padding: 0.5em 2em;
+    border: transparent;
+    box-shadow: 2px 2px 4px rgba(8, 134, 236, 0.554);
+    background: dodgerblue;
+    border-radius: 4px;
+}
+
+.buttonUsers a{
+    color: white;
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospaces;
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+   
+.buttonUsers:hover {
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(30,144,255,1) 0%, rgba(0,212,255,1) 100%);
+}
+   
+.buttonUsers:active {
+    transform: translate(0em, 0.2em);
+   }

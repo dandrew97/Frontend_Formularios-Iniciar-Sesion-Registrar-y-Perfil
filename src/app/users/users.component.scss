@@ -1,0 +1,21 @@
+ul {
+    display: flex;
+    gap: 2.5rem;
+}
+li {
+    display: block;
+    transition: .5s;
+}
+ul:hover li {
+    filter: blur(1px);
+}
+ul li:hover {
+    filter: blur(0px);
+}
+a {
+    font-family: 'Courier New', Courier, monospace;
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    letter-spacing: 1px;
+}

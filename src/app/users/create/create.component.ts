@@ -8,14 +8,13 @@ import { UserservicesService } from 'src/app/services/userservices.service';
   styleUrls: ['./create.component.scss']
 })
 export class CreateComponent {
-  nombres!: string;
-  apellidos!: string;
+  username!: string;
   email!: string;
   password!: string;
 
   constructor(private userService: UserservicesService) {}
   createUser(): void {
-    this.userService.create(this.nombres, this.apellidos, this.email, this.password)
+    this.userService.create(this.username, this.email, this.password)
   }
 
 }
