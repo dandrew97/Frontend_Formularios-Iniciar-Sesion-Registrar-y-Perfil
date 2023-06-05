@@ -2,11 +2,11 @@
 	<p class="title"> Iniciar Sesión </p>
 	<form (ngSubmit)="login()" #loginForm="ngForm" class="form">
 		<div class="input-group">
-			<label for="email">email</label>
+			<label for="email"> Email </label>
 			<input [(ngModel)]="email" type="email" name="email" id="email" placeholder="" required>
 		</div>
 		<div class="input-group">
-			<label for="password">Password</label>
+			<label for="password"> Contraseña </label>
 			<input [(ngModel)]="password" type="password" name="password" id="password" placeholder="" required>
 			<div class="forgot">
 				<a rel="noopener noreferrer" href="#"> Olvidaste tu contraseña ?</a>
