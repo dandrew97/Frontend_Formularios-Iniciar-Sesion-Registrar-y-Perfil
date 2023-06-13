@@ -7,6 +7,8 @@ import { HttpClient, HttpErrorResponse, HttpHeaders} from '@angular/common/http'
 
 //Autenticación y peticiones a la base de datos
 export class UserservicesService {
+  private userEmail!: string;
+  private userData!: string;
   private apiUrl = 'http://localhost:3000/users';
   private authToken!: string;
 
@@ -23,6 +25,7 @@ export class UserservicesService {
       (response:any) => {
         localStorage.setItem('token', response.token)
         console.log('Respuesta:', response);
+        this.userEmail = formData.email;
       },
       (error) => {
         if(error instanceof HttpErrorResponse){
@@ -52,6 +55,28 @@ export class UserservicesService {
         console.log( 'Error: ', error);
       }
     )
+  }
+
+  // Método que 
+  getUser() {
+    const getUrl = `${this.apiUrl} / ${this.userEmail}`;
+    return this.http.get(getUrl)
+  }
+
+  updateUser(body: any) {
+    const updateUrl = `${this.apiUrl}/update/${body.id}`
+    const formData = body
+    console.log('Usuario editado exitosamente', formData, updateUrl)
+    this.http.put(updateUrl, formData)
+    .subscribe(
+      (response:any) => {
+        console.log('Usuario actualizado con exito. ', response);
+      },
+      (error) => {
+        console.log( 'Error: ', error);
+      }
+    )
+
   }
 
   //Token

@@ -1,1 +1,33 @@
-<p> ¡Página en desarrollo! </p>
+<div *ngIf="!editValue; else editInfo">
+    <ul>
+        <li>{{userProfile.username}}</li>
+        <li>{{userProfile.email}}</li>
+    </ul>
+    <br>
+    <button (click)="editProfile()"> Editar Perfil </button>
+
+</div>
+
+<!--  Formulario -->
+<ng-template #editInfo>
+    <form #createForm="ngForm" class="form">
+        <p class="title"> Mi Cuenta </p>
+        <input type="file" name="image" (change)="onFileSelected($event)"> 
+        <a href=""> editar </a>
+        <p class="message"> ¡Bienvenido a tu perfil y tu información personal! </p>
+        <div class="input-group">
+            <label for="username"> Username </label>
+            <input [(ngModel)]="userProfile.username" type="text" name="username" id="username" placeholder="" required>
+        </div>
+        <div class="input-group">
+            <label for="email"> Email </label>
+            <input [(ngModel)]="userProfile.email" type="email" name="email" id="email" placeholder="" required>
+        </div>
+        <div class="input-group">
+            <label for="password"> Contraseña </label>
+            <input [(ngModel)]="userProfile.password" type="password" name="password" id="password" placeholder="" required>
+        </div>
+        <br>
+        <button (click)="updateProfile()"> Guardar Cambios </button>
+    </form>
+</ng-template>
